@@ -2,6 +2,9 @@
   "name": "workshop-submissions",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.13.0"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
