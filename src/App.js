@@ -89,6 +89,18 @@ const AppContainer = styled.div`
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 20px;
+
+    p {
+      margin: 0 0 10px 0;
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover,
+      &:focus {
+        color: ${colors.white};
+      }
+    }
   }
 `;
 
@@ -131,6 +143,10 @@ const App = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+
+    if (!window.confirm(`Are you sure you want to submit the link: ${submissionLink}?`)) {
+      return;
+    }
     setButtonShown(false);
     setSubmissionLink('');
 
