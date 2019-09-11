@@ -182,7 +182,7 @@ const App = () => {
 
         <main>
           <ol>
-            {data.length &&
+            {data.length > 0 &&
               data.map((s, i) => (
                 <li key={s.id}>
                   <a href={s.url} target="_blank" rel="noopener noreferrer">
